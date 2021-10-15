@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>MAIN PAGE</h1>
+<table class="table table-striped">
+        <tr class="bg-info">
+            <th>Name</th>
+            <th>Age</th>    
+            <th>Birthday</th>
+
+        </tr>
+        <tbody id="myTable">
+
+        </tbody>
+</table>
+<script>
+
+function myFunction(){
+        var myarr = [
+            { 'name' : 'Micheal', 'age' : '40' },
+            { 'name' : 'Micheal', 'age' : '40' },
+            { 'name' : 'Micheal', 'age' : '40' },
+            { 'name' : 'Micheal', 'age' : '40' },
+            { 'name' : 'Micheal', 'age' : '40' },
+            { 'name' : 'Micheal', 'age' : '40' }
+
+        ];
+
+ }
+ buildTable(myarr)
+function buildTable(data){
+    var table = document.getElementById('myTable')
+
+    for (var i = 0; i < data.length; i++) {
+         
+        var row = ` <tr>
+                                <td>${data[i].name}</td>
+                                <td>${data[i].age}</td>
+                                <td>${data[i].birthday}</td>
+                        </tr>
+                    `
+                    table.innerHTML +=row
+            }
+}
+
+
+</script>
+</body>
+<script src="sample.js"></script>
+</html>
